@@ -13,3 +13,4 @@ def send_post(post):
     subreddit = reddit.subreddit(subreddit_name)
     print("Publishing post with title " + post['title'] + " to subreddit" + subreddit_name)
     subreddit.submit(title=post['title'], selftext=post['text'])
+    print("Published post with title " + post['title'] + " to subreddit" + subreddit_name)
