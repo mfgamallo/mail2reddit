@@ -21,7 +21,7 @@ def get_body(message):
     if(message.is_multipart()):
         return get_body(message.get_payload()[0])
     else:
-        return message.get_payload(decode=True).__str__()
+        return message.get_payload(decode=True).decode("utf-8")
 
     
 def get_post(body):
